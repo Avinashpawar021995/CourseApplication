@@ -1,0 +1,42 @@
+package com.spring.course.SpringCourse.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.spring.course.SpringCourse.enitity.Course;
+import com.spring.course.SpringCourse.respositry.CourserRepository;
+
+public class CourseServiceImpl implements CourseService {
+    @Autowired 
+ private CourserRepository courserRepository;
+	@Override
+	public List<Course> getCourse() {
+		
+		return  courserRepository.findAll() ;
+	}
+
+	@Override
+	public Course getCourses(Long id) {
+		return courserRepository.getOne(id);
+	}
+
+	@Override
+	public Course addCourse(Course course) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Course updateCource(Course course) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deteleCources(long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

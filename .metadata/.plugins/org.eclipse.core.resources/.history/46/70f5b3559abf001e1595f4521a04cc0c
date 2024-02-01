@@ -1,0 +1,11 @@
+package com.spring.course.SpringCourse.service;
+
+import java.util.List;
+
+import com.spring.course.SpringCourse.enitity.Course;
+
+public interface CourseService {
+
+	List<Course> getCourse();
+
+}

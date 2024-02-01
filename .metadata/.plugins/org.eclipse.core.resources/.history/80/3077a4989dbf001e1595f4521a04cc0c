@@ -1,0 +1,9 @@
+package com.spring.course.SpringCourse.enitity;
+
+public class Course {
+	private long  id;
+	private String name;
+	private String title;
+	private String description;
+
+}

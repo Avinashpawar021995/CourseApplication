@@ -1,0 +1,36 @@
+package com.spring.course.SpringCourse.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.spring.course.SpringCourse.enitity.Course;
+import com.spring.course.SpringCourse.service.CourseService;
+@CrossOrigin("*")
+@RestController
+
+public class CourseController {
+	@Autowired
+private	CourseService courseService;
+	
+ @GetMapping("/home")
+ public  String home()
+ {
+	 return  "welcome to courses application";
+ }
+ 
+	@GetMapping("/courses")
+ public List<Course> getCourse()
+ {
+	 return courseService.getCourse();
+ }
+	public  Course getCourses(@PathVariable Long id)
+	{
+		return courseService.getCourses(id);
+	}
+	
+}

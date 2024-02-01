@@ -1,0 +1,5 @@
+package com.spring.course.SpringCourse.service;
+
+public interface CourseService {
+
+}
